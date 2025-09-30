@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "7620f793-5501-49fa-aeba-ebe54c7e8f31",
+		"name": "kyc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32441494"
+	},
+	"item": [
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Create business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_company",
+									"value": "sadsadasd",
+									"type": "text"
+								},
+								{
+									"key": "type_company",
+									"value": "Doanh nghiệp",
+									"type": "text"
+								},
+								{
+									"key": "establishment_date",
+									"value": "12/07/2025",
+									"type": "text"
+								},
+								{
+									"key": "business_registration_number",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sdasdsadsad",
+									"type": "text"
+								},
+								{
+									"key": "career",
+									"value": "IT",
+									"type": "text"
+								},
+								{
+									"key": "number_of_employees",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "certification_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731323682270-IMG_3531.webp"
+								},
+								{
+									"key": "front_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731401506254-IMG_3689.webp"
+								},
+								{
+									"key": "back_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731401529520-IMG_3685.webp"
+								},
+								{
+									"key": "email",
+									"value": "toanchuong94@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "address_wallet",
+									"value": "asdsadsadasd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:4000/api/business"
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp_code\": \"362463\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/confirm-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Approved business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"password\": \"cd20be66-8986-4a0f-bbe1-8f9171891899\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/approve-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Business Not Approved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Business Approved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/approved-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Business",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/business/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Business",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/business/17"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "Get Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/1751012972466.webp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Individual",
+			"item": [
+				{
+					"name": "Get All Individual Not Approved",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"password\": \"cd20be66-8986-4a0f-bbe1-8f9171891899\"\r\n}"
+						},
+						"url": "http://localhost:4000/api/individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Individual Approved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/approved-individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Individual Approved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/individual/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create individual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "sQqd",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "wrffsafdwa",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "32`324232`1e2fsa",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "dsada",
+									"type": "text"
+								},
+								{
+									"key": "cccd_number",
+									"value": "DADDd",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "ADdDDAA",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "banconcop113",
+									"type": "text"
+								},
+								{
+									"key": "front_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731323682270-IMG_3531.webp"
+								},
+								{
+									"key": "back_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731401580805-IMG_3687.webp"
+								},
+								{
+									"key": "address_wallet",
+									"value": "FAdadd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:4000/api/individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Individual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp_code\": \"834460\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/confirm-individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Individual",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Approved individual",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

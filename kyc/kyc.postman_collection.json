@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "7620f793-5501-49fa-aeba-ebe54c7e8f31",
+		"name": "kyc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32441494"
+	},
+	"item": [
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Create business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_company",
+									"value": "Hai Dang Group",
+									"type": "text"
+								},
+								{
+									"key": "type_company",
+									"value": "Doanh nghiệp",
+									"type": "text"
+								},
+								{
+									"key": "establishment_date",
+									"value": "12/07/2040",
+									"type": "text"
+								},
+								{
+									"key": "business_registration_number",
+									"value": "88888888888888",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "28 Phùng Tá Chu",
+									"type": "text"
+								},
+								{
+									"key": "career",
+									"value": "IT",
+									"type": "text"
+								},
+								{
+									"key": "number_of_employees",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "certification_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731323682270-IMG_3531.webp"
+								},
+								{
+									"key": "front_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731401506254-IMG_3689.webp"
+								},
+								{
+									"key": "back_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/1731438437028-IMG_3796.webp"
+								},
+								{
+									"key": "email",
+									"value": "chuongtoan1602@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "address_wallet",
+									"value": "asdsadsadasd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:4000/api/business"
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp_code\": \"374247\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/confirm-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Approved business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4NDM2LCJleHAiOjE3NTEyNzcyMzZ9.f0zPm9-v1AcvdC3DhP3i7K1c9SlY0TLpXo-6skWYy_0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/approve-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Business Not Approved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4NDM2LCJleHAiOjE3NTEyNzcyMzZ9.f0zPm9-v1AcvdC3DhP3i7K1c9SlY0TLpXo-6skWYy_0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Business Approved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4NDM2LCJleHAiOjE3NTEyNzcyMzZ9.f0zPm9-v1AcvdC3DhP3i7K1c9SlY0TLpXo-6skWYy_0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/approved-business"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4NDM2LCJleHAiOjE3NTEyNzcyMzZ9.f0zPm9-v1AcvdC3DhP3i7K1c9SlY0TLpXo-6skWYy_0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/business/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Business",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4NDM2LCJleHAiOjE3NTEyNzcyMzZ9.f0zPm9-v1AcvdC3DhP3i7K1c9SlY0TLpXo-6skWYy_0"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:4000/api/business/6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "Get Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": ""
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/upload/1751246249032.webp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Individual",
+			"item": [
+				{
+					"name": "Get All Individual Not Approved",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4ODU1LCJleHAiOjE3NTEyNzc2NTV9.lRjgXCbQbT7l8LuOfyHfpRA61XmVXrL3QzKEVbxNgNY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n}"
+						},
+						"url": "http://localhost:4000/api/individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Individual Approved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4ODU1LCJleHAiOjE3NTEyNzc2NTV9.lRjgXCbQbT7l8LuOfyHfpRA61XmVXrL3QzKEVbxNgNY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/approved-individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Individual Approved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4ODU1LCJleHAiOjE3NTEyNzc2NTV9.lRjgXCbQbT7l8LuOfyHfpRA61XmVXrL3QzKEVbxNgNY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/api/individual/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Create individual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "sQqd",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "wrffsafdwa",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "32`324232`1e2fsa",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "dsada",
+									"type": "text"
+								},
+								{
+									"key": "cccd_number",
+									"value": "DADDd",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "ADdDDAA",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "chuongtoan1602@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "front_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/Ảnh chụp màn hình 2024-12-10 185703.png"
+								},
+								{
+									"key": "back_cccd_image",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/OneDrive/Pictures/Screenshots/Ảnh chụp màn hình 2025-01-24 115935.png"
+								},
+								{
+									"key": "address_wallet",
+									"value": "FAdadd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:4000/api/individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Individual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp_code\": \"848800\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/confirm-individual"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Individual",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ5MjUyLCJleHAiOjE3NTEyNzgwNTJ9.ZP6MM5p1n5bnkynqCFVvr9fy3rdn6TJ5bWjVHOOGcT4"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:4000/api/individual/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Approved individual",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMjQ4ODU1LCJleHAiOjE3NTEyNzc2NTV9.lRjgXCbQbT7l8LuOfyHfpRA61XmVXrL3QzKEVbxNgNY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/approve-individual"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"toan12\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
